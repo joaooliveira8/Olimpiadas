@@ -1,10 +1,10 @@
 function pesquisar() {
-    // Obtém a seção HTML onde os resultados serão exibidos
+    
     let section = document.getElementById("resultados-pesquisa");
 
     let campoPesquisa = document.getElementById("campo-pesquisa").value
 
-    // se campoPesquisa for uma string sem nada
+    
     if (!campoPesquisa ) {
         section.innerHTML = "<p> Nada foi encontrado. Você precisa digitar o nome do atleta ou esporte.</p>"
         return
@@ -18,7 +18,7 @@ function pesquisar() {
     let descricao = "";
     let tags = "";
 
-    // Itera sobre cada dado da lista de dados
+    
     for (let dado of dados) {
         titulo = dado.titulo.toLocaleLowerCase()
         descricao = dado.descricao.toLocaleLowerCase()
@@ -43,6 +43,6 @@ function pesquisar() {
         resultados = "<p>Nada foi encontrado</p>"
     }
 
-    // Atribui os resultados gerados à seção HTML
+    
     section.innerHTML = resultados;
 }
